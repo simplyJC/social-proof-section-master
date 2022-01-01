@@ -1,0 +1,255 @@
+@use 'reset';
+@use 'font';
+@use 'color';
+
+
+body{
+    font-family: 'Spartan';
+    background: url('/images/bg-pattern-top-mobile.svg'), url('/images/bg-pattern-bottom-mobile.svg');
+    background-repeat: no-repeat, no-repeat;
+    background-position:   top  left  , bottom right ;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding: 4rem 1rem;
+    font-size: 15px;
+    
+}
+
+
+.header__container{
+   // background: darkcyan;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+
+/*Top Container*/
+.main__container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.title{
+    text-align: center;
+    padding: 2rem;
+    font-weight: 700;
+    font-size: 2.2rem;
+}
+.title__container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 370px;
+   // background: cornflowerblue;
+}
+
+.content{
+   text-align: center;
+    padding: 1rem;
+}
+//Rating Stars Section
+
+
+.rating{
+    background: color.$light-grayish-magenta;
+    width:360px ;
+    margin: 1.4rem;
+    border-radius: 5px;
+    padding: 1rem;
+    //max-width: 360px;
+    display: flex;
+    flex-direction: column;
+    
+
+    
+    &__container{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        //background: pink;
+    }
+    &__stars{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        padding: 0 0 1rem 1rem;
+        gap: .5rem;
+    
+    }
+    &__reviews{
+        font-weight: 700;
+        text-align: center;
+    
+    }
+
+
+}
+
+
+//Card Section 
+.card{
+    background: color.$very-dark-magenta;
+    color: white;
+    padding: 2.2rem;
+    margin:.5rem 0; 
+    border-radius: 6px;
+    
+    max-width: 360px;
+    &__container{
+        //background: cadetblue;
+        width: 100%;
+        display: flex;  
+        flex-direction: column; 
+        justify-content: center;
+        align-items: center;
+    }
+    
+    &__content{
+        color: color.$light-grayish-magenta;
+        padding: 1rem 0 0 0;
+        text-indent:5px; 
+    }
+    &__buyer{
+        width: 100%;
+        display: flex;   
+        &-name-status{
+           display: flex; 
+           flex-direction: column;
+           justify-content: center;
+        }
+        &-name{
+            font-size: .9rem;
+            font-weight: 700;
+        }
+        &-status{
+            font-size: .9rem;
+            font-weight: 700;
+            color: color.$dark-grayish-magenta;
+        }
+        
+    }
+    &__buyer-avatar{
+        border-radius: 3rem;
+        width: 50px;
+        margin:1rem; 
+
+    }
+
+}
+
+
+// Footer
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  margin-top: 1rem;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+//Media Query
+@media (min-width:950px){
+    body{
+        background: url('/images/bg-pattern-top-desktop.svg'), url('/images/bg-pattern-bottom-desktop.svg');
+        background-repeat: no-repeat, no-repeat;
+        background-position:   top  left  , bottom right ;
+    }
+
+    .title__container{
+       // background: coral;
+        max-width: 500px;
+        
+    }
+    .title{
+        font-size: 3rem;
+        padding: 1rem;
+        text-align: left;
+    }
+  
+    .content{
+        font-size: 1.1rem;
+        text-align: left;
+        line-height: 1.5rem;
+    }
+   
+    .header__container{
+        flex-direction: row;
+        gap: 1rem;
+        justify-content: space-between;
+        
+       
+    
+    }
+    .main__container{
+
+        margin: auto;
+        max-width: 1440px;
+       // background: chocolate;
+        
+    }
+   
+    .card{
+        max-height: 500px;
+        max-width: 450px;
+        padding-bottom: 3rem;
+        &__container{
+            flex-direction: row;
+            gap: .5rem;
+            justify-content: space-between;
+            margin: 1rem;
+        }
+        &:nth-child(2){
+            margin:2rem 0 0 0;     
+        }
+        &:nth-child(3){
+            margin:6rem 0 0 0;     
+        }
+    }
+    .rating{
+        flex-direction: row;
+        width: 450px;
+        margin: .5rem;
+
+        
+        &__container{
+ 
+           // background: rgb(250, 146, 163);
+            width: 50%;
+            
+            //max-width: 500px;
+        }
+        &__reviews{
+            
+        }
+        &__stars{
+           justify-content: left;
+           max-width: 40%;
+        }
+        &__left{
+            align-self: flex-start;
+        }
+        &__center{
+            align-self: center;
+        }
+        &__right{
+            align-self: flex-end;
+        }
+
+    }
+
+
+
+
+
+}

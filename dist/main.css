@@ -1,0 +1,223 @@
+@import url("https://fonts.googleapis.com/css2?family=Spartan:wght@400;500;700&display=swap");
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*### Primary
+
+Very Dark Magenta: hsl(300, 43%, 22%)
+Soft Pink: hsl(333, 80%, 67%)
+
+### Neutral
+
+Dark Grayish Magenta: hsl(303, 10%, 53%)
+Light Grayish Magenta: hsl(300, 24%, 96%)
+White: hsl(0, 0%, 100%)*/
+body {
+  font-family: "Spartan";
+  background: url("/images/bg-pattern-top-mobile.svg"), url("/images/bg-pattern-bottom-mobile.svg");
+  background-repeat: no-repeat, no-repeat;
+  background-position: top left, bottom right;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 4rem 1rem;
+  font-size: 15px;
+}
+
+.header__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+/*Top Container*/
+.main__container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title {
+  text-align: center;
+  padding: 2rem;
+  font-weight: 700;
+  font-size: 2.2rem;
+}
+
+.title__container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 370px;
+}
+
+.content {
+  text-align: center;
+  padding: 1rem;
+}
+
+.rating {
+  background: #f7f2f7;
+  width: 360px;
+  margin: 1.4rem;
+  border-radius: 5px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+.rating__container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.rating__stars {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 0 0 1rem 1rem;
+  gap: 0.5rem;
+}
+.rating__reviews {
+  font-weight: 700;
+  text-align: center;
+}
+
+.card {
+  background: #502050;
+  color: white;
+  padding: 2.2rem;
+  margin: 0.5rem 0;
+  border-radius: 6px;
+  max-width: 360px;
+}
+.card__container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.card__content {
+  color: #f7f2f7;
+  padding: 1rem 0 0 0;
+  text-indent: 5px;
+}
+.card__buyer {
+  width: 100%;
+  display: flex;
+}
+.card__buyer-name-status {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.card__buyer-name {
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+.card__buyer-status {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #937b92;
+}
+.card__buyer-avatar {
+  border-radius: 3rem;
+  width: 50px;
+  margin: 1rem;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.attribution a {
+  color: #3e52a3;
+}
+
+@media (min-width: 950px) {
+  body {
+    background: url("/images/bg-pattern-top-desktop.svg"), url("/images/bg-pattern-bottom-desktop.svg");
+    background-repeat: no-repeat, no-repeat;
+    background-position: top left, bottom right;
+  }
+
+  .title__container {
+    max-width: 500px;
+  }
+
+  .title {
+    font-size: 3rem;
+    padding: 1rem;
+    text-align: left;
+  }
+
+  .content {
+    font-size: 1.1rem;
+    text-align: left;
+    line-height: 1.5rem;
+  }
+
+  .header__container {
+    flex-direction: row;
+    gap: 1rem;
+    justify-content: space-between;
+  }
+
+  .main__container {
+    margin: auto;
+    max-width: 1440px;
+  }
+
+  .card {
+    max-height: 500px;
+    max-width: 450px;
+    padding-bottom: 3rem;
+  }
+  .card__container {
+    flex-direction: row;
+    gap: 0.5rem;
+    justify-content: space-between;
+    margin: 1rem;
+  }
+  .card:nth-child(2) {
+    margin: 2rem 0 0 0;
+  }
+  .card:nth-child(3) {
+    margin: 6rem 0 0 0;
+  }
+
+  .rating {
+    flex-direction: row;
+    width: 450px;
+    margin: 0.5rem;
+  }
+  .rating__container {
+    width: 50%;
+  }
+  .rating__stars {
+    justify-content: left;
+    max-width: 40%;
+  }
+  .rating__left {
+    align-self: flex-start;
+  }
+  .rating__center {
+    align-self: center;
+  }
+  .rating__right {
+    align-self: flex-end;
+  }
+}/*# sourceMappingURL=main.css.map */
