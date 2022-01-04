@@ -5,7 +5,7 @@
 
 body{
     font-family: 'Spartan';
-    background: url('/images/bg-pattern-top-mobile.svg'), url('/images/bg-pattern-bottom-mobile.svg');
+    background: url('/social-proof-section-master/images/bg-pattern-top-mobile.svg'), url('/social-proof-section-master/images/bg-pattern-bottom-mobile.svg');
     background-repeat: no-repeat, no-repeat;
     background-position:   top  left  , bottom right ;
     min-height: 100vh;
@@ -88,6 +88,7 @@ body{
     &__reviews{
         font-weight: 700;
         text-align: center;
+        color: color.$very-dark-magenta;
     
     }
 
@@ -131,7 +132,7 @@ body{
         &-status{
             font-size: .9rem;
             font-weight: 700;
-            color: color.$dark-grayish-magenta;
+            color: color.$soft-pink;
         }
         
     }
