@@ -88,7 +88,7 @@ body{
     &__reviews{
         font-weight: 700;
         text-align: center;
-        color: color.$very-dark-magenta;
+        color: color.$$very-dark-magenta
     
     }
 
@@ -159,7 +159,7 @@ body{
 //Media Query
 @media (min-width:950px){
     body{
-        background: url('/images/bg-pattern-top-desktop.svg'), url('/images/bg-pattern-bottom-desktop.svg');
+        background: url('./images/bg-pattern-top-desktop.svg'), url('./images/bg-pattern-bottom-desktop.svg');
         background-repeat: no-repeat, no-repeat;
         background-position:   top  left  , bottom right ;
     }
